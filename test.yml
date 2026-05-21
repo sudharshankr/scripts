@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: whoami
+      command: id
+      register: result
+    - debug: var=result.stdout
